@@ -62,6 +62,8 @@ m = numpy.matrix(feld)
 
 for i in range(-hoehe, breite):
     diagonal = numpy.diagonal(m, i)
+    points_yellow = 0
+    points_red = 0
     for entry in diagonal:
         if entry == 'Y':
             points_yellow += 1
@@ -75,6 +77,7 @@ for i in range(-hoehe, breite):
             sys.exit()            
 
         if points_red == 4:
+            print("UEEEH")
             print("Red wins!")
             sys.exit()
 
