@@ -8,26 +8,32 @@ public class Change {
 	public static void main(String[] args) {
 		do {
 			String line = IO.readLine();
-			String[] spl = line.split(",");
-			double zuz = Double.parseDouble(spl[0]);
-			double geg = Double.parseDouble(spl[1].replace(";", ""));
-			double change = geg - zuz;
-			if(change <= 0) {
-				IO.println("Geldbetrag war <= 0, breche ab.");
+			if(line.trim().isEmpty()) {
+				IO.println("Zeile war leer, breche ab.");
 				break;
 			}
-			int[] count = new int[values.length];
-			for(int i = 0; i < count.length && change > 0; i++) {
-				while(change > values[i]) {
-					count[i]++;
-					change -= values[i];
+			if(!line.contains("#")) {
+				String[] spl = line.split(",");
+				double zuz = Double.parseDouble(spl[0]);
+				double geg = Double.parseDouble(spl[1].replace(";", ""));
+				double change = geg - zuz;
+				if(change <= 0) {
+					IO.println("Geldbetrag war <= 0, breche ab.");
+					break;
 				}
+				int[] count = new int[values.length];
+				for(int i = 0; i < count.length && change > 0; i++) {
+					while(change > values[i]) {
+						count[i]++;
+						change -= values[i];
+					}
+				}
+				for(int i = values.length - 1; i >= 0; i--) {
+					IO.print(count[i]);
+					if(i > 0) IO.print(",");
+				}
+				IO.println();
 			}
-			for(int i = values.length - 1; i >= 0; i--) {
-				IO.print(count[i]);
-				if(i > 0) IO.print(",");
-			}
-			IO.println();
 		} while(true);
 	}
 }
