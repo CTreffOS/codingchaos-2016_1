@@ -18,7 +18,8 @@ public class Chiffre{
 				coded[i] = chiff[letter];
 				IO.print(coded[i]);
 			}
-			else coded[i] = ' ';
+			else{coded[i] = ' ';
+			IO.print(coded[i]);}
 		}
 		IO.println();
 	}
