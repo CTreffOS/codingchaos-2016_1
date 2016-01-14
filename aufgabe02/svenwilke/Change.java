@@ -7,7 +7,11 @@ public class Change {
 	
 	public static void main(String[] args) {
 		do {
-			double change = IO.readDouble();
+			String line = IO.readLine();
+			String[] spl = line.split(",");
+			double zuz = Double.parseDouble(spl[0]);
+			double geg = Double.parseDouble(spl[1].replace(";", ""));
+			double change = geg - zuz;
 			if(change <= 0) {
 				IO.println("Geldbetrag war <= 0, breche ab.");
 				break;
