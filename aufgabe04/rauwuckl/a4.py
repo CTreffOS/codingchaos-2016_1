@@ -1,4 +1,5 @@
-f=open('instanz1')
+import sys
+f=open(sys.argv[1])
 lines=f.readlines()
 hand = []
 for line in lines:
@@ -33,3 +34,6 @@ def hinlegen(hand, alreadyPlayed):
 
 def ok(card1, card2):
 	return ((card1[0] == card2[0]) or (card1[1] == card2[1]))
+
+
+hinlegen(hand, [])
