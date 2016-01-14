@@ -1,0 +1,4 @@
+```
+./chiffre.py BeispielAlphabet.txt
+```
+
