@@ -10,9 +10,13 @@ def calculate_change(price,money):
 	result = []
 	for coin in reversed(coins):
 		if change / coin > 1:
+			print("change: ", change)
+			print("coin: ", coin)
 			amount_of_coins = int(change / coin)
 			result.append(amount_of_coins)
 			change -= amount_of_coins
+			print("- ", amount_of_coins)
+			print(" = ", change)
 		else:
 			result.append(0)
 	return list(reversed(result))
