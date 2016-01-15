@@ -1,4 +1,4 @@
-# Aufgabe 00: Git Pull Request
+Aufgabe 00: Git Pull Request
 
 Das Ziel dieser Aufgabe ist, das Prozedere der Aufgabenabgabe zu testen und ggf
 den Umgang mit Git zu üben.
