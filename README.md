@@ -31,3 +31,10 @@ werden:
  - Rust
 
 Alles andere Bedarf eine kurze Rücksprache mit der Jury.
+
+# Gewinner
+
+* Clemens Hutter
+* Sven Wilke 
+
+Wir gratulieren den Beiden!
